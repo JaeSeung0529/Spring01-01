@@ -116,6 +116,12 @@
 		class="ch04_pjt_01.ems.member.service.PrintStudentInformationService">
 		<constructor-arg ref="studentAllSelectService" />
 	</bean>
-
+	<!-- EMSInformationService 빈 -->
+	<!-- 
+	<bean id = "eMSInformationService"
+		class= "ch04_pjt_01.ems.member.service.EMSInformationService">
+		<property name=""></property>
+	
+	</bean> -->
 </beans>
 
