@@ -92,6 +92,12 @@
 		<constructor-arg ref="studentDao" />
 	</bean>
 	
+	<!-- StudentDeleteService 빈 생성 -->
+	<bean id="studentDeleteService"
+		class="ch04_pjt_01.ems.member.service.StudentDeleteService">
+		<constructor-arg ref="studentDao" />
+	</bean>
+	
 
 	<!-- StudentAllSelectService 빈 생성 -->
 	<bean id="studentSelectService"
