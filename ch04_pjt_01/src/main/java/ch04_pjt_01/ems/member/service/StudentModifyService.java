@@ -1,0 +1,13 @@
+package ch04_pjt_01.ems.member.service;
+
+import ch04_pjt_01.ems.member.dao.StudentDao;
+
+public class StudentModifyService {
+	private StudentDao studentDao;
+	public StudentModifyService() {}
+	public StudentModifyService(StudentDao studentDao) 
+	{
+		this.studentDao = studentDao;
+	}
+
+}
