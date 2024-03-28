@@ -18,6 +18,7 @@ public class StudentModifyService {
 		}
 		else System.out.println("수정하고자 하는 학생이 없음");
 		
+		
 	}
 	public Boolean verify(String sNum) //boolean --> Boolean
 	{

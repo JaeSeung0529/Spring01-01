@@ -73,6 +73,7 @@ public class MainClass {
 	      //특정 학번에 해당하는 학생을 삭제하고 출력
 	      StudentDeleteService deleteService = ctx.getBean("studentDeleteService", StudentDeleteService.class);
 	      deleteService.delete("hbs005");
+	      psi.printStudentInfo();
 	}
 	
 
