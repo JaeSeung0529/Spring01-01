@@ -34,8 +34,9 @@ public class MainClass {
 	                     sPws[i], sNames[i], sAges[i], 
 	                     sGenders[i], sMajors[i]));
 	      }
+	      PrintStudentInformationService psi = 
 	      ctx.getBean("printStudentInformationService",PrintStudentInformationService.class);
-	      
+	      psi.printStudentInfo();
 	}
 
 }
