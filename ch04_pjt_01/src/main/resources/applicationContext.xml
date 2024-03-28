@@ -85,8 +85,21 @@
 		class="ch04_pjt_01.ems.member.service.StudentRegisterService">
 		<constructor-arg ref="studentDao" />
 	</bean>
+	
+	<!-- StudentModifyService 빈 생성 -->
+	<bean id="studentModifyService"
+		class="ch04_pjt_01.ems.member.service.StudentModifyService">
+		<constructor-arg ref="studentDao" />
+	</bean>
+	
 
 	<!-- StudentAllSelectService 빈 생성 -->
+	<bean id="studentSelectService"
+		class="ch04_pjt_01.ems.member.service.StudentSelectService">
+		<constructor-arg ref="studentDao" />
+	</bean>
+	
+	<!-- StudentSelectService 빈 생성 -->
 	<bean id="studentAllSelectService"
 		class="ch04_pjt_01.ems.member.service.StudentAllSelectService">
 		<constructor-arg ref="studentDao" />
