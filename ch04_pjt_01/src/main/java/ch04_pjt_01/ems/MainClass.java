@@ -66,6 +66,8 @@ public class MainClass {
 	      
 	      StudentModifyService ModifyService =  
 	      ctx.getBean("studentModifyService",StudentModifyService.class);
+	      ModifyService.modify(new Student("hbs006","pig","p0066","melissa",27,'w',"Computer"));
+	      psi.printStudentInfo();
 	      
 	}
 	
