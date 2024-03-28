@@ -36,7 +36,14 @@ public class MainClass {
 	      }
 	      PrintStudentInformationService psi = 
 	      ctx.getBean("printStudentInformationService",PrintStudentInformationService.class);
+	      psi.printStudentInfo();//학생리스트를 전부 출력
+	      
+	      //학생 등록
+	      
+	      registerService= ctx.getBean("studentRegisterService", StudentRegisterService.class);
+	      registerService.register(new Student("hbs006", "dear","p0006","melissa",26,'W',"Music"));
 	      psi.printStudentInfo();
 	}
+	
 
 }
