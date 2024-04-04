@@ -3,6 +3,7 @@ package ch04_pjt_01.ems;
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 import ch04_pjt_01.ems.member.Student;
+import ch04_pjt_01.ems.member.service.EMSInformationService;
 import ch04_pjt_01.ems.member.service.PrintStudentInformationService;
 import ch04_pjt_01.ems.member.service.StudentDeleteService;
 import ch04_pjt_01.ems.member.service.StudentModifyService;
@@ -73,7 +74,14 @@ public class MainClass {
 	      //특정 학번에 해당하는 학생을 삭제하고 출력
 	      StudentDeleteService deleteService = ctx.getBean("studentDeleteService", StudentDeleteService.class);
 	      deleteService.delete("hbs005");
-	      psi.printStudentInfo();
+	      psi.printStudentInfo();	
+	      
+	      //EMS 시스템 정보 출력
+	      EMSInformationService obems =
+	      ctx.getBean("eMSInformationService",EMSInformationService.class);
+	      obems.printEMSInformation();
+	      
+	      ctx.close();
 	}
 	
 
