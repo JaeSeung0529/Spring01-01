@@ -20,6 +20,7 @@ public class StudentSelectService {
 		else
 			System.out.println("검색된 학생이 없음.");
 		return null;
+	
 	}
 	public boolean verify(String sNum)
 	{
