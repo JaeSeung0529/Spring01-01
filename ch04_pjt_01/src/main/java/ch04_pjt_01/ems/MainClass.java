@@ -1,5 +1,7 @@
 package ch04_pjt_01.ems;
 
+import java.util.Scanner;
+
 import org.springframework.context.support.GenericXmlApplicationContext;
 
 import ch04_pjt_01.ems.member.Student;
@@ -8,6 +10,7 @@ import ch04_pjt_01.ems.member.service.PrintStudentInformationService;
 import ch04_pjt_01.ems.member.service.StudentDeleteService;
 import ch04_pjt_01.ems.member.service.StudentModifyService;
 import ch04_pjt_01.ems.member.service.StudentRegisterService;
+import ch04_pjt_01.ems.member.service.StudentSearchService;
 import ch04_pjt_01.ems.member.service.StudentSelectService;
 import ch04_pjt_01.ems.utils.InitSampleData;
 
@@ -64,6 +67,8 @@ public class MainClass {
 	      System.out.println("|sMajor:" + selectedstudent.getsMajor());
 	      System.out.println("END ----------------------------");
 	      
+	   
+	      
 	      //특정 학번에 해당하는 학생의 정보를 수정하고 출력
 	      
 	      StudentModifyService ModifyService =  
@@ -80,6 +85,33 @@ public class MainClass {
 	      EMSInformationService obems =
 	      ctx.getBean("eMSInformationService",EMSInformationService.class);
 	      obems.printEMSInformation();
+	      
+ //특정 아이디에 해당하는 학생 한명만 검색하고 출력
+	      
+	      StudentSearchService studentSearchService = 
+	    		  ctx.getBean("studentSearchService",StudentSearchService.class);
+	      
+	      String searchID = null;
+	      Scanner sc = new Scanner(System.in);
+			System.out.println("학생의 아이디를 입력하세요.");
+	      searchID = sc.next();
+	      
+	      Student searchStudent = 
+	    		  studentSelectService.select(searchID);
+	      
+
+	      System.out.println("STUDENT START sId ------------------");
+	      System.out.print("sNum:" + searchStudent.getsNum() + "\t");
+	      System.out.print("|sId:" + searchStudent.getsId() + "\t");
+	      System.out.print("|sPw:" + searchStudent.getsPw() + "\t");
+	      System.out.print("|sName:" + searchStudent.getsName() + "\t");
+	      System.out.print("|sAge:" + searchStudent.getsAge() + "\t");
+	      System.out.print("|sGender:" + searchStudent.getsGender() + "\t");
+	      System.out.println("|sMajor:" + searchStudent.getsMajor());
+	      System.out.println("END ----------------------------");
+
+
+	      
 	      
 	      ctx.close();
 	}

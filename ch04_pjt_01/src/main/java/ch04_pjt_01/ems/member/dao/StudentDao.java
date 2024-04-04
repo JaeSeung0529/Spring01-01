@@ -14,11 +14,16 @@ public class StudentDao {
 	
 	public void insert(Student student) {
 	      studentDB.put(student.getsNum(), student);
+	      studentDB.put(student.getsId(), student);
 	   }
 
 	   public Student select(String sNum) {
 	      return studentDB.get(sNum);
 	   }
+	   public Student search(String sId) {
+		  return studentDB.get(sId);
+	   }
+	   
 
 	   public void update(Student student) {
 	      studentDB.put(student.getsNum(), student);
