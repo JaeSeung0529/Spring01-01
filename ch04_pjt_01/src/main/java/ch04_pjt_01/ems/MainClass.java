@@ -17,8 +17,12 @@ import ch04_pjt_01.ems.utils.InitSampleData;
 public class MainClass {
 
 	public static void main(String[] args) {
+//		GenericXmlApplicationContext ctx = 
+//	             new GenericXmlApplicationContext("classpath:applicationContext.xml");
+		
 		GenericXmlApplicationContext ctx = 
-	             new GenericXmlApplicationContext("classpath:applicationContext.xml");
+	             new GenericXmlApplicationContext("classpath:appCtx1.xml","classpath:appCtx2.xml","classpath:appCtx3.xml");
+		
 		
 		//샘플데이터
 		InitSampleData initSampleData = ctx.getBean("initSampleData" , InitSampleData.class);
@@ -57,7 +61,7 @@ public class MainClass {
 	      Student selectedstudent = 
 	    		  studentSelectService.select("hbs006");
 
-	      System.out.println("STUDENT START ------------------");
+	      System.out.println("STUDENT START sNum ------------------");
 	      System.out.print("sNum:" + selectedstudent.getsNum() + "\t");
 	      System.out.print("|sId:" + selectedstudent.getsId() + "\t");
 	      System.out.print("|sPw:" + selectedstudent.getsPw() + "\t");
@@ -115,6 +119,4 @@ public class MainClass {
 	      
 	      ctx.close();
 	}
-	
-
 }
