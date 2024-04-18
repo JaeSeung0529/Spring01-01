@@ -41,7 +41,7 @@ public class ContactRegisterService {
         return contactSet == null ? true : false;
     }
     
-    //@Autowired
+    //@Inject
     public void setContactDao(ContactDao contactDao) {
        System.out.println(
        "ContactRegisterService의 setContactDao 메서드 호출됨.");
@@ -49,7 +49,7 @@ public class ContactRegisterService {
     }
 
       
-//    @Autowired
+//    @Inject
     public void setWordDao(ContactDao contactDao) {
        System.out.println(
     "ContactRegisterService의 setWordDao 메서드 호출됨.");

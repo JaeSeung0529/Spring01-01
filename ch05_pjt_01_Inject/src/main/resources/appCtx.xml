@@ -29,7 +29,13 @@
       </property>
    </bean>
    
-   <bean id="contactDao"
+<!--    <bean id="contactDao" -->
+<!--    class="ch05_pjt_01.contact.dao.ContactDao"/> -->
+   <bean id="contactDao1"
+   class="ch05_pjt_01.contact.dao.ContactDao"/>
+      <bean id="contactDao2"
+   class="ch05_pjt_01.contact.dao.ContactDao"/>
+      <bean id="contactDao3"
    class="ch05_pjt_01.contact.dao.ContactDao"/>
    
    <bean id="registerService" 

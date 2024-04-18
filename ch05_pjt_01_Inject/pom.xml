@@ -11,14 +11,9 @@
         <artifactId>spring-context</artifactId>
         <version>5.2.9.RELEASE</version>
     </dependency>
-    <dependency>
-    	<groupId>Spring5</groupId>
-    	<artifactId>ch03_pjt_01</artifactId>
-    	<version>0.0.1-SNAPSHOT</version>
-    </dependency>
   </dependencies>
-
-  <!-- 빌드 설정 -->
+  
+   <!-- 빌드 설정 -->
   <build>
     <plugins>
         <plugin>
@@ -32,4 +27,5 @@
         </plugin>
     </plugins>
   </build>
+  
 </project>
