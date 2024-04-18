@@ -7,7 +7,6 @@ public class ContactSet {
     public ContactSet(String name, String phoneNumber) {
         this.name = name;
         this.phoneNumber = phoneNumber;
-        
     }
 
 	public String getName() {
@@ -24,7 +23,6 @@ public class ContactSet {
 
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
-	}
-
-	
+	}   
+    
 }

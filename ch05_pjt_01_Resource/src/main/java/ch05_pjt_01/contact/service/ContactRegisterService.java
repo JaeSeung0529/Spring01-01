@@ -1,24 +1,28 @@
 package ch05_pjt_01.contact.service;
 
+import javax.annotation.Resource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
 import ch05_pjt_01.contact.ContactSet;
 import ch05_pjt_01.contact.dao.ContactDao;
 
 public class ContactRegisterService {
-	private ContactDao contactDao = null;
+	@Resource
+	private ContactDao contactDao = null ;
     
     public ContactRegisterService() {
+    	System.out.println(
+    "ContactRegisterService의 default Constructor"); 	// 기본생성자     
+    }    
 
-       System.out.println(
-    "ContactRegisterService의 default Constructor");    // 기본생성자     
-    }
-    
-
+   @Resource
     public ContactRegisterService(ContactDao contactDao) {
-       System.out.println(
+    	System.out.println(
     "ContactDao 파라미터 하나 가진 ContactRegisterService 생성자");
-       System.out.println(
-       "ContactRegisterService에서 contactDao: " + 
-       contactDao);    // contactDao 출력
+    	System.out.println(
+    	"ContactRegisterService에서 contactDao: " + 
+    				contactDao); 	// contactDao 출력
 
         this.contactDao = contactDao;
     }
@@ -37,18 +41,17 @@ public class ContactRegisterService {
         return contactSet == null ? true : false;
     }
     
-
+    @Resource
     public void setContactDao(ContactDao contactDao) {
-       System.out.println(
-       "ContactRegisterService의 setContactDao 메서드 호출됨.");
+    	System.out.println(
+    	"ContactRegisterService의 setContactDao 메서드 호출됨.");
         this.contactDao = contactDao;
-    }
+    }      
 
-      
-
+    @Resource
     public void setWordDao(ContactDao contactDao) {
-       System.out.println(
+    	System.out.println(
     "ContactRegisterService의 setWordDao 메서드 호출됨.");
         this.contactDao = contactDao;
-    }
+    }	
 }
